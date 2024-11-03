@@ -1,0 +1,75 @@
+.homeDetails{
+width: 100%;
+padding: 20px;
+gap: 20px;
+display: flex;
+flex-direction: column;
+box-sizing: border-box;
+background-color: rgb(238, 235, 235);
+}
+.homeDetailLongcard{
+width: 100%;
+box-sizing: border-box;
+padding: 15px;
+background-color: white;
+}
+.homeDetailLongCardTitle{
+font-size: 21px;
+font-weight: 600;
+}
+.homeDetailLongCardItem{
+margin-top: 10px;
+display: flex;
+gap: 10px;
+width: 100%;
+height: 100%;
+box-sizing: border-box;
+padding: 10px 0; 
+overflow: hidden;
+}
+.scrollDiv{
+display: flex;
+width: 100%;
+gap: 15px;
+overflow-x: auto;
+}
+.homeDetailLongCardItem {
+display: flex;
+flex-shrink: 0;
+cursor: pointer;
+flex-direction: column;
+width: 17%;
+align-items: center;
+box-sizing: border-box;
+padding: 10px;
+background-color: rgb(247, 247, 247);
+}
+.homeDetailLongCardItemImg {
+    width: 100%;
+}
+.homeDetailLongCardItemImgDetail{
+display: flex;
+flex-direction: column;
+width: 100%;
+}
+.homeDetailLongCardItemImgTopDetail{
+display: flex;
+gap: 5px;
+}
+.homeDetailPercentageOff{
+    padding: 4px 6px;
+    background-color: #702e07;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 2px;
+    color: white;
+    }
+    .limitedTimeDealhomeDetail {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+    }
+    .BottomDetail {
+        font-size: 12px;
+        padding: 2px 0;
+    }

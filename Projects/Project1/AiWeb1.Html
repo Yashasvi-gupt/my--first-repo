@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Section --> 
+    <nav class="navbar navbar-light justify-content-between">
+        <a class="navbar-brand">Weather App</a>
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Enter location" id="searchLocation">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="button" id="searchButton">Search</button>
+        </form>
+    </nav>
+    
+
+    <!-- Main Section with background -->
+    <div class="container-fluid main-content ">
+        <div class="row">
+            <!-- First Card: Current Weather -->
+            <div class="col-lg-6 col-md-6 mb-4 ">
+                <div class="card st-card">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Current Weather</h4>
+                        <h5 id="current-temp">25°C</h5>
+                        <p id="current-conditions">Clear Sky</p>
+                        <p id="current-details">Wind: 10 km/h,<br> Humidity: 60%,<br> Pressure: 1015 hPa</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Card: Hourly Forecast -->
+            <div class=" col-lg-6 col-md-6 mb-4 ">
+                <div class="card nd-card">
+                    <div class="card-body">
+                        <h4 class="card-title">Hourly Forecast</h4>
+                        <div id="hourly-forecast">
+                            <!-- Hourly data goes here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript (for dynamic data) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

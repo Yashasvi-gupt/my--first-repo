@@ -1,0 +1,186 @@
+.Nav_a {
+    display: flex;
+    background-color:black;
+    width: 100%;
+    height: 60px;
+    color: white;
+    box-sizing: border-box;
+}
+.Nav_a_left {
+    display: flex;
+    gap: 5px;
+    padding: 10px;
+}
+.NavLeftLogo {
+    width: 50px;
+    height: 25px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    padding: 10px;
+    cursor: pointer;
+    &:hover {
+        border: 1px solid;
+        border-radius: 3px;
+    }
+}
+.amazonLogaNav {
+    height: 100%;
+    width: 70px;
+}
+.NavLocation {
+    display: flex;
+    gap: 5px;
+    padding: 8px;
+    height: 30px;
+    cursor: pointer;
+    &:hover {
+        border-radius: 3px;
+        border: 1px solid ;
+    }
+}
+.NavLocationIcon {
+    width: 15px;
+    padding-top: 5px;
+}
+.NavLocationPlace {
+    display: flex;
+    flex-direction: column;
+}
+.NavLocationPlaceTop{
+    font-size: 12px;
+    color: #ccc;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+.NavLocationPlaceBottom {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 10px;
+}
+.Nav_a_center {
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 10px, 4px;
+width: 50%;
+}
+.NavSearch {
+display: flex;
+width: 100%;
+height: 40px;
+border-radius: 5px;
+border: 1px solid rgb(22, 28, 36);
+} 
+.NavSearchAll {
+display: flex;
+background-color: #cdcdcd;
+gap: 5px;
+border-top-left-radius: 5px;
+border-bottom-left-radius: 5px;
+justify-content: center;
+align-items: center;
+padding: 5px;
+cursor: pointer;
+color: #999999;
+}
+.AllText {
+    font-size: 12px;
+    font-weight: 600;
+}
+.SearchInputBox {
+    padding: 5px ;
+    width: 84%;
+    &::placeholder {
+        font-size: 15px;
+        font-weight: 500;
+        color: gray;
+    }
+    &::focus {
+        outline: none;
+    }
+}
+.NavSearchIcon{
+    background-color: #fabd69;
+    font-size: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+        background-color: #f1ba73;
+    }
+}
+.SearchIcon {
+    font-size: 20px;
+    color: black;
+}
+.Nav_a_right {
+    padding: 10px;
+    color: white;
+    display: flex;
+    gap: 1px;
+
+}
+.NavLangChoose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    padding-top: 10px;
+    height: 30px;
+    gap: 5px;
+    cursor: pointer;
+    &:hover {
+        border-radius: 3px;
+        border: 1px solid;
+    }
+
+}
+.Flag {
+    width: 30px;
+    height: 20px;
+}
+.chooseLang {
+    font-size: 14px;
+    display: flex;
+    line-height: 10px;
+    align-items: center;
+    font-weight: 700;
+}
+.LangDropDown {
+    color: #ccc;
+}
+.NavSigneIn {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
+    height: 30px;
+    &:hover {
+        border: 1px solid;
+        border-radius: 3px;
+    }
+}
+.NavSigneInHello {
+    font-size: 12px;
+    font-weight: 500;
+}
+.CartTitle {
+    font-size: 14px;
+    font-weight: 500px;
+}
+.OnCart {
+    position: absolute;
+    bottom: 70%;
+    left: 22%;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fabd69;
+}

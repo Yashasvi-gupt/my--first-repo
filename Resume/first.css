@@ -1,0 +1,432 @@
+body {
+  width: 100%;
+  margin: 0;
+  border: 0;
+  background-image: url(low-poly-grid-haikei.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position: fixed;
+  background-size: cover;
+  overflow-y: hidden;
+  backdrop-filter: blur(5px);
+}
+.container {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-items: center;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+.container::-webkit-scrollbar {
+  display: none;
+}
+.navbar {
+  background-color:rgb(0 16 28);
+}
+.navbar a {
+  color: rgb(114, 195, 233); 
+}
+.navbar a:hover {
+  color: white; 
+}
+.Profile-header {
+  width: 95%;
+  background-color: transparent;
+  border: solid 5px rgba(255, 255, 255, 0.795);
+  border-radius: 30px;
+}
+.Pro-p {
+  background-color: #297ea6bb;
+  margin: 35px;
+  border: 2px solid rgb(125, 228, 247);
+  animation: appear3 0.5s ease-out forwards, appear4 8s ease-out infinite;
+  animation-delay: 0s, 0.5s;
+  box-shadow: 20px 20px 15px rgba(0, 8, 24, 0.507),-20px -20px 15px rgba(0, 8, 24, 0.507);
+}
+.animat-a {
+  animation: appear1 0.8s ease-out forwards, appear2 4s ease-out infinite;
+  animation-delay: 0s, 0.8s;
+  box-shadow: 10px 10px 15px rgba(230, 225, 255, 0.514),  -10px -10px 15px rgba(230, 225, 255, 0.514);
+}
+.animat-b {
+  animation: appear1-2 0.8s ease-out forwards, appear2-2 2s ease-out forwards;
+  animation-delay: 0s, 0.8s;
+}
+.Profile-header1 {
+  overflow: hidden;
+  border: 1px solid rgb(125, 228, 247);
+ 
+}
+.Profile-header1 video {
+  z-index: -1;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  object-fit: cover ;
+}
+
+@keyframes appear1 {
+  0% {
+    transform: skewy(0deg);
+
+  }
+
+  50% {
+    transform: skewy(-8deg);
+  }
+
+  100% {
+    transform: skewy(-7deg);
+  }
+}
+@keyframes appear1-2 {
+  0% {
+    transform: skewy(-7deg);
+
+  }
+
+  50% {
+    transform: skewy(-8deg);
+  }
+
+  100% {
+    transform: skewy(0deg);
+  }
+}
+@keyframes appear2 {
+  0% {
+    transform: skewy(-7deg);
+
+  }
+
+ 50% {
+    transform: skewy(-8deg);
+  }
+
+  100% {
+    transform: skewy(-7deg) ;
+  }
+}
+@keyframes appear2-2 {
+  0% {
+    transform: scale(1);
+
+  }
+  100% {
+    transform: scale(0.95);
+  }
+}
+@keyframes appear3 {
+  0% {
+    transform: skewy(0deg);
+
+  }
+
+  50% {
+    transform: skewy(4deg);
+  }
+
+  100% {
+    transform: skewy(3deg);
+  }
+}
+@keyframes appear3-2 {
+  0% {
+    transform: skewy(3deg);
+
+  }
+
+  50% {
+    transform: skewy(4deg);
+  }
+
+  100% {
+    transform: skewy(0deg);
+  }
+}
+@keyframes appear4 {
+  0% {
+    transform: skewy(3deg) translateY(0);
+  }
+
+  50% {
+    transform: skewy(4deg) translateY(-5px); /* Moves up */
+  }
+
+  100% {
+    transform: skewy(3deg) translateY(0); /* Moves back down */
+  }
+}
+@keyframes appear4-2 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.06)
+  }
+}
+.ProfileImg {
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+}
+
+.profileAne {
+
+  filter: blur(10px);
+  opacity: 0;
+  animation: appear 0.8s ease-out forwards;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(40%);
+    filter: blur(10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+.non-active {
+ display: none;
+}
+.active {
+  height: 70vh;
+  background-color: #0c24355b;
+  align-items: center;
+}
+.img {
+ width: 10vw;
+ min-width: 5vh;
+ max-width: 25vh;
+}
+.skillCard {
+  display: flex;
+ width: 100%;
+  overflow-x: scroll; /* Allow horizontal scrolling */
+  gap: 1rem;
+  scroll-behavior: smooth;/* Smooth scrolling when using JS */
+  scrollbar-width: none;
+}
+.skillCard::-webkit-scrollbar {
+  display: none;
+}
+.Limks {
+  margin-left: 5vw;
+  margin-top: 10px;
+  color: white;
+  font-size: 16px;
+  background-color: transparent;
+  border: 3px solid white ;
+  flex-direction: row;
+  border-radius: 20px;
+  transform: scale(1);
+  transition: 0.5s;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.329);
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+}
+.a {
+  margin: 20px;
+  text-decoration: none;
+  color: white;
+}
+.skillCard > div {
+  display: flex;
+  position: relative;
+  min-width: fit-content;
+  flex-direction: column;
+  background-color: transparent;
+  border: none;
+}
+
+.card {
+  flex: 0 0 auto;
+}
+.Size {
+  width: 100%;
+
+}
+
+/* Arrow positioning and styling */
+.arrow-left, .arrow-right {
+  font-size: 2.5rem;
+  color:rgb(114, 195, 233); /* You can adjust the color */
+}
+
+.arrow-left:hover, .arrow-right:hover {
+  color:white; /* Hover color */
+  transform: scale(1.2); /* Hover effect */
+  transition: transform 0.2s ease-in-out;
+}
+.text-container {
+  color: white;
+  display: flex;
+}
+.arrow-right:hover
+
+
+/* Game container style */
+.game-container {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  overflow: hidden; /* Hide blocks after flying off */
+}
+
+/* Block style */
+.block {
+  position: absolute;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  background-color: rgba(3, 161, 223, 0.5);
+  bottom: 0; /* Always lands at the bottom */
+  transition: transform 2s ease-in-out; /* Smooth landing and flying */
+  transition :'transform 1.5s ease-out';
+ left: -15vh;
+}
+
+/* Example animation for flying off screen (to be overridden by JS for randomness) */
+@keyframes flyOff {
+  to {
+      transform: translate(500px, -500px); /* Fly off screen */
+  }
+}
+
+.Education {
+ 
+  height: auto;
+}
+.Card3 {
+  height: auto;
+}
+.Projects {
+  overflow: hidden;
+}
+.Project1 {
+  animation: slideInLeft 1.5s ease-out forwards ;
+ 
+}
+.Project2 {
+  animation: slideInRight 1.5s ease-out forwards ;
+}
+.Project3 {
+  animation: slideInLeft 1.5s ease-out forwards ;
+}
+.Projecter {
+  background-color : rgba(8, 26, 40, 0.616);
+  color:rgb(111, 252, 240);
+}
+@keyframes slideInLeft {
+  0% {
+      transform: translateX(-500%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+      transform: translateX(500%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+.E-Card1{
+  animation: slideInLeft 1.2s ease-out forwards; 
+}
+.E-Card2 {
+  animation: slideInLeft 1.2s ease-out forwards ;
+} 
+
+.I-Card3 {
+  animation: slideInRight 1.6s ease-out forwards ;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: rgba(4, 115, 201, 0.616);
+}
+@media (max-width: 768px) {
+  .Profile-header {
+    width: 95%;
+    background-color: transparent;
+    border: none;
+    
+  }
+  
+  .Pro-p {
+    background-color: #297ea6bb;
+    
+    display: grid;
+    align-items: center;
+    margin: 35px;
+    border: 2px solid rgb(125, 228, 247);
+    animation:none;
+    box-shadow: 20px 20px 15px rgba(0, 8, 24, 0.507),-20px -20px 15px rgba(0, 8, 24, 0.507);
+  }
+  .animat-a {
+    animation:none;
+    box-shadow: 10px 10px 15px rgba(230, 225, 255, 0.514),  -10px -10px 15px rgba(230, 225, 255, 0.514);
+  }
+  .animat-b {
+    animation: none;
+    animation-delay: 0s, 0.8s;
+  }
+  .Profile-header1 {
+    overflow: hidden;
+    border: 1px solid rgb(125, 228, 247);
+   
+  }
+  .Profile-header1 video {
+    display: none;
+  }
+  .non-active {
+  display: block;
+  background-color: #0c24355b;
+  align-items: center;
+   }
+   .skillCard > div {
+    position: relative;
+    min-width: fit-content;
+    flex: 0 0 auto; 
+    background-color: transparent;
+    border: none;
+  }
+  
+  .card {
+    flex: 0 0 auto;
+  }
+
+  /* Arrow positioning and styling */
+  .arrow-left, .arrow-right {
+    font-size: 2.5rem;
+    color:rgb(114, 195, 233); /* You can adjust the color */
+  }
+  
+  .arrow-left:hover, .arrow-right:hover {
+    color:white; /* Hover color */
+    transform: scale(1.2); /* Hover effect */
+    transition: transform 0.2s ease-in-out;
+  }
+  .text-container {
+    color: white;
+  }
+  .navbar-nav, .navbar-toggler {
+    transform: scale(0);
+  }
+}

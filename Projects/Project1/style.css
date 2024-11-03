@@ -1,0 +1,44 @@
+body {
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif; /* Main font */
+    color: rgb(255, 255, 255);
+}
+
+.navbar-brand {
+    font-family: 'Georgia', serif; /* Brand title font */
+    font-size: 1.8rem;
+}
+
+.card-title {
+    font-family: 'Lucida Sans', sans-serif; /* Title font */
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+#current-temp {
+    font-family: 'Courier New', monospace; /* Temperature font */
+    font-size: 2.8rem;
+    color: #ff8800;
+}
+
+#current-conditions,
+#current-details {
+    font-family: 'Verdana', sans-serif; /* Details font */
+}
+.st-card{
+  background-color: rgba(19, 19, 19, 0.13);
+  backdrop-filter: blur(15px);
+  box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.781);
+}
+.nd-card {
+  background-color: rgba(19, 19, 19, 0.13);
+  backdrop-filter: blur(15px);
+  box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.781);
+}
+
+#hourly-forecast {
+    justify-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
