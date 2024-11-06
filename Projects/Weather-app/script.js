@@ -148,4 +148,4 @@ searchButton.addEventListener('click', () => {
 });
 
 // Fetch initial data for a default location (e.g., New York) on page load
-fetchWeatherData("New York");
+fetchWeatherData("India");
