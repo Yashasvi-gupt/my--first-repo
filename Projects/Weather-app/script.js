@@ -127,7 +127,17 @@ locationInput.addEventListener('change', (event) => {
         alert("Please enter a location.");
     }
 });
-
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        event.preventDefault(); // Prevent the default behavior of the Enter key
+        const location = locationInput.value.trim();
+        if (location) {
+            fetchWeatherData(location);
+        } else {
+            alert("Please enter a location.");
+        }
+    }
+});
 searchButton.addEventListener('click', () => {
     const location = locationInput.value.trim();
     if (location) {

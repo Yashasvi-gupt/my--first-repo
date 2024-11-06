@@ -12,6 +12,7 @@ body {
 }
 .container {
   display: grid;
+  font-size: 14px;
   width: 100%;
   height: 100vh;
   align-items: center;
@@ -208,9 +209,9 @@ body {
 .skillCard {
   display: flex;
  width: 100%;
-  overflow-x: scroll; /* Allow horizontal scrolling */
+  overflow-x: scroll; 
   gap: 1rem;
-  scroll-behavior: smooth;/* Smooth scrolling when using JS */
+  scroll-behavior: smooth;
   scrollbar-width: none;
 }
 .skillCard::-webkit-scrollbar {
@@ -255,15 +256,15 @@ body {
 
 }
 
-/* Arrow positioning and styling */
+
 .arrow-left, .arrow-right {
   font-size: 2.5rem;
-  color:rgb(114, 195, 233); /* You can adjust the color */
+  color:rgb(114, 195, 233); 
 }
 
 .arrow-left:hover, .arrow-right:hover {
-  color:white; /* Hover color */
-  transform: scale(1.2); /* Hover effect */
+  color:white; 
+  transform: scale(1.2); 
   transition: transform 0.2s ease-in-out;
 }
 .text-container {
@@ -272,33 +273,29 @@ body {
 }
 .arrow-right:hover
 
-
-/* Game container style */
 .game-container {
   position:absolute;
   width: 100%;
   height: 100%;
   background: transparent;
-  overflow: hidden; /* Hide blocks after flying off */
+  overflow: hidden; 
 }
 
-/* Block style */
 .block {
   position: absolute;
   border-radius: 50%;
   width: 35px;
   height: 35px;
   background-color: rgba(3, 161, 223, 0.5);
-  bottom: 0; /* Always lands at the bottom */
-  transition: transform 2s ease-in-out; /* Smooth landing and flying */
+  bottom: 0; 
+  transition: transform 2s ease-in-out; 
   transition :'transform 1.5s ease-out';
  left: -15vh;
 }
 
-/* Example animation for flying off screen (to be overridden by JS for randomness) */
 @keyframes flyOff {
   to {
-      transform: translate(500px, -500px); /* Fly off screen */
+      transform: translate(500px, -500px);
   }
 }
 
@@ -412,15 +409,15 @@ body {
     flex: 0 0 auto;
   }
 
-  /* Arrow positioning and styling */
+ 
   .arrow-left, .arrow-right {
     font-size: 2.5rem;
-    color:rgb(114, 195, 233); /* You can adjust the color */
+    color:rgb(114, 195, 233); 
   }
   
   .arrow-left:hover, .arrow-right:hover {
-    color:white; /* Hover color */
-    transform: scale(1.2); /* Hover effect */
+    color:white; 
+    transform: scale(1.2); 
     transition: transform 0.2s ease-in-out;
   }
   .text-container {
@@ -428,5 +425,8 @@ body {
   }
   .navbar-nav, .navbar-toggler {
     transform: scale(0);
+  }
+  .block {
+    display: none;
   }
 }
