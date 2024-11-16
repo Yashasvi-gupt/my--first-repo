@@ -1,0 +1,34 @@
+.NavBar {
+    top: 85vh;
+    height: 30px;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+   }
+   .link {
+    text-decoration: none;
+    color: white;
+   }
+   .NavBar > li {
+    border: 2px;
+    background-color: black;
+    text-align: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 30%;
+    list-style: none;
+    transition: 0.9s;
+   }
+   .NavBar > li:hover {
+    scale: 1.8;  
+   }
+   .colorfill {
+    background-color: green;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+   }
