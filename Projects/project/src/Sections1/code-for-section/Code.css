@@ -1,26 +1,26 @@
 .code-bubble {
-  width: 80vw;
-    background-color: transparent;
-    border-radius: 8px;
-    padding: 16px;
-    overflow-x: auto;
-    font-family: 'Courier New', monospace;
-    position: relative;
-  }
-  
-  .code-bubble pre {
-    margin: 0;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-  }
-  
-  .code-bubble::before {
-    content: "Code";
-    font-weight: bold;
-    background-color: #333;
-    color: #fff;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-size: 0.9em;
-  }
-  
+    width: 80vw;
+      background-color: transparent;
+      border-radius: 8px;
+      padding: 16px;
+      overflow-x: auto;
+      font-family: 'Courier New', monospace;
+      position: relative;
+    }
+    
+    .code-bubble pre {
+      margin: 0;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+    
+    .code-bubble::before {
+      content: "Code";
+      font-weight: bold;
+      background-color: #333;
+      color: #fff;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+    

@@ -68,7 +68,6 @@ function updateHourlyForecast(data) {
             <p><i class="${weatherInfo.iconClass}"></i> ${weatherInfo.description}</p>
         `;
         
-        // Append each hourly forecast to the container
         hourlyForecastContainer.appendChild(forecastElement);
     });
 }
@@ -147,5 +146,5 @@ searchButton.addEventListener('click', () => {
     }
 });
 
-// Fetch initial data for a default location (e.g., New York) on page load
+// Fetch initial data for a default location on page load
 fetchWeatherData("India");

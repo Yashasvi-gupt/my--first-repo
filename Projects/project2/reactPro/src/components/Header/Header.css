@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+VA+Guides&family=Roboto+Slab:wght@100..900&display=swap');
+
+.header {
+    display: flex;
+    background-color: rgb(202, 28, 28);
+    justify-content: center;
+    width: 100%;
+    color: #ffffff;
+}
+.name {
+    font-family: "Playwrite DE VA Guides", serif;
+    font-weight: 400;
+    font-size: 2rem;
+}

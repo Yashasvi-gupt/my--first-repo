@@ -1,6 +1,6 @@
 
 const row = document.querySelector('.row');
-const active = 'active'; 
+const active = 'Active'; 
 const nonActive = 'non-active'; 
 const card1 = document.querySelector('.Card1');
 const card2 = document.querySelector('.Card2');
@@ -12,6 +12,7 @@ const education = document.querySelector('.education');
 const project = document.querySelector('.project'); 
 const Pop = document.querySelector('.Pro-p');
 const Pop2 = document.querySelector('.Profile-header1');
+const navLinks = document.querySelectorAll('.nav-link');
 
 function setActiveCard(activeCard) {
     const cards = [card1, card2, card3, card4];
@@ -116,16 +117,53 @@ function flyOff(block) {
 }
 
 function generateBlocks(numberOfBlocks) {
+    if (window.matchMedia('(max-width: 768px)').matches) {
+        return; // Do nothing if the width is 768px or less
+    }
+
     for (let i = 0; i < numberOfBlocks; i++) {
         setTimeout(createRandomBlock, i * 300); 
     }
 }
 
 function checkCard4Active() {
-    if (card4.classList.contains('active')) {
+    if (card4.classList.contains('Active')) {
         generateBlocks(20); 
+         
+        window.addEventListener('resize', generateBlocks);
     }
 }
 
 const observer = new MutationObserver(checkCard4Active);
 observer.observe(card4, { attributes: true, attributeFilter: ['class'] });
+
+function checkWidth() {
+    const cards = [card1, card2, card3, card4]; 
+    if (window.matchMedia('(max-width: 768px)').matches) {
+        cards.forEach(card => {
+            card.classList.add('Active');
+            card.classList.add('row');
+            card.classList.remove('non-active');
+        });
+    } 
+}
+
+checkWidth();
+
+window.addEventListener('resize', checkWidth);
+
+const refreshButton = document.querySelector('.navbar-brand');
+
+refreshButton.addEventListener('click', () => {
+    location.reload();
+});
+
+
+
+// Add click event listener to each nav link
+navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        navLinks.forEach(link => link.classList.remove('active'));
+        this.classList.add('active');
+    });
+});

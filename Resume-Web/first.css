@@ -19,18 +19,61 @@ body {
   justify-items: center;
   overflow: scroll;
   scrollbar-width: none;
+  font-family: "Space Mono", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 .container::-webkit-scrollbar {
   display: none;
+}
+@font-face {
+  font-family: Costom1;
+  src: local('NauryzRedKeds'), url('NauryzRedKeds.ttf') format('truetype');
+}
+@font-face {
+  font-family: Costom2;
+  src: local('IDM Minimal'), url('IDM Minimal.ttf') format('truetype');
+}
+.navbar-brand {
+  font-family: 'Costom1';
+  font-weight: 400;
+  font-size: 1.1rem !important;
+  color: white !important;
+  text-shadow: 0  0 5px rgb(184, 186, 192);
 }
 .navbar {
   background-color:rgb(0 16 28);
 }
 .navbar a {
   color: rgb(114, 195, 233); 
+  transition: text-shadow 0.5s, color 0.5s;
 }
 .navbar a:hover {
+  text-shadow: 0  0 8px white;
   color: white; 
+}
+.nav-link {
+  font-family: "Orbitron", serif;
+  font-size: 0.8rem !important;
+}
+.nav-link::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: white;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.5s;
+}
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+.active {
+  color: white !important;
 }
 .Profile-header {
   width: 95%;
@@ -196,7 +239,7 @@ body {
 .non-active {
  display: none;
 }
-.active {
+.Active {
   height: 70vh;
   background-color: #0c24355b;
   align-items: center;
@@ -218,14 +261,13 @@ body {
   display: none;
 }
 .Limks {
-  margin-left: 5vw;
-  margin-top: 10px;
-  color: white;
+ margin: 5px;
+  padding: 5px;
   font-size: 16px;
   background-color: transparent;
-  border: 3px solid white ;
-  flex-direction: row;
-  border-radius: 20px;
+  border: 3px solid rgba(230, 245, 244, 0.877) ;
+aspect-ratio: 1 / 1;
+  border-radius: 50%;
   transform: scale(1);
   transition: 0.5s;
   &:hover {
@@ -234,10 +276,17 @@ body {
     transition: 0.5s;
   }
 }
-.a {
-  margin: 20px;
+.a { 
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  color: white;
+  color: rgba(230, 245, 244, 0.877);
+}
+.Link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
 }
 .skillCard > div {
   display: flex;
@@ -303,21 +352,18 @@ body {
  
   height: auto;
 }
-.Card3 {
-  height: auto;
-}
 .Projects {
   overflow: hidden;
 }
 .Project1 {
-  animation: slideInLeft 1.5s ease-out forwards ;
+  animation: slideInLeft 1s ease forwards ;
  
 }
 .Project2 {
-  animation: slideInRight 1.5s ease-out forwards ;
+  animation: slideInRight 1s ease forwards ;
 }
 .Project3 {
-  animation: slideInLeft 1.5s ease-out forwards ;
+  animation: slideInLeft 1s ease forwards ;
 }
 .Projecter {
   background-color : rgba(8, 26, 40, 0.616);
@@ -347,16 +393,19 @@ body {
 
 .E-Card1{
   animation: slideInLeft 1.2s ease-out forwards; 
+  background-color: rgba(223, 243, 255, 0.938) !important;
 }
 .E-Card2 {
   animation: slideInLeft 1.2s ease-out forwards ;
+  background-color: rgba(223, 243, 255, 0.938) !important;
 } 
 
 .I-Card3 {
   animation: slideInRight 1.6s ease-out forwards ;
+  background-color: rgba(223, 243, 255, 0.938) !important;
   margin-top: 5px;
   margin-bottom: 5px;
-  color: rgba(4, 115, 201, 0.616);
+ 
 }
 @media (max-width: 768px) {
   .Profile-header {
@@ -428,5 +477,35 @@ body {
   }
   .block {
     display: none;
+  }
+  .E-Card1 {
+    background-color: transparent !important;
+    color: white !important;
+    border: none !important;
+  }
+  .E-Card2 {
+    background-color: transparent !important;
+    color: white !important;
+    border: none !important;
+  }
+  .I-Card3 {
+    background-color: transparent !important;
+    color: white !important;
+    border: none !important;
+  }
+  .Education > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    background-color:transparent;
+    border: 1px solid rgba(4, 115, 201, 0.616);
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 8, 24, 0.507),-10px -10px 15px rgba(0, 8, 24, 0.507);
+  }
+  .Card3 {
+    height: auto;
   }
 }

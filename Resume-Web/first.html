@@ -7,9 +7,11 @@
     <title>Your Page Title</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="first.css">
+    <script src="https://kit.fontawesome.com/491148619f.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
@@ -21,18 +23,19 @@
             <div class="Pro-p">
                 <nav class="navbar navbar-expand-sm " style="color: rgb(114 195 233);">
                     <div class="container-fluid">
-                        <a class="navbar-brand "><b>Portfolio</b></a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        <a class="navbar-brand ">PORTFOLIO</a>
+                        <div class="navbar-toggler" type="div" data-bs-toggle="collapse"
                             data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
                             aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
-                        </button>
+                        </div>
                         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div class="navbar-nav">
-                                <a class="nav-link info">Home</a>
+                                <a class="nav-link active info">Home</a>
                                 <a class="nav-link skills">Skill</a>
-                                <a class="nav-link education">Education</a>
+                                
                                 <a class="nav-link project">Project</a>
+                                <a class="nav-link education">Education</a>
                             </div>
                         </div>
                     </div>
@@ -41,18 +44,27 @@
                     <video autoplay muted loop>
                         <source src="VID_20241014001441.mp4" type="video/mp4">
                     </video>
-                    <div class=" Card1 row active">
+                    <div class=" Card1 row Active">
 
                         <div class="profileAne intro text-md-start text-center text-light col-md-8 col-11 ms-3">
-                            <h2>Hi, I am <b>Yashasvi</b>,</h2>
-                            And i am an aspiring web developer.
+                            <h2 >Hi, I am <b >Yashasvi</b>,</h2>
+                            I am an aspiring web developer.
                             I well practiced in front-end, and i am hoping to start my
                             curior as front-end developer. I am confident in my ability to
                             grow and learn as changing time.
                             <div class="Link">
-                                <button class="Limks ">
-                                    <a class="a" href="mailto:yashasvigupt@gmail.com?subject=Contact">Contact</a>
-                                </button>
+                                <div class="Limks" title="Email:- yashasvigupt@gmail.com">
+                                    <a class="a"  href="https://mail.google.com/mail/?view=cm&fs=1&to=yashasvigupt@gmail.com&su=Contact&body=Hi%20Yashasvi,"><i class="fa-regular fa-envelope"></i></a>
+                                </div>
+                                <div class="Limks" title="Contact no. 9258274909">
+                                    <a class="a" href="https://wa.me/9258274909"><i class="fa-brands fa-whatsapp"></i></i></a>
+                                </div>
+                                <div class="Limks" title="Linked-in">
+                                    <a class="a" title="Linked-in" href="https://linkedin.com/in/yashasvigupta03"><i class="fa-brands fa-linkedin-in"></i></a>
+                                </div>
+                                <div class="Limks" title="Git-hub">
+                                    <a class="a" title="Git-hub" href="https://github.com/Yashasvi-gupt"><i class="fa-brands fa-github"></i></a>
+                                </div>
                             </div>
                         </div>
                         
@@ -84,7 +96,7 @@
                                         <img src="css.png" alt="Placeholder Image 3" class="img">
                                     </div>
                                     <div class="text-container align-items-center justify-content-center">
-                                        <p >HTML and CSS are the core of every frount end designe and bootstrap has proven to be an is an amazing library for quickily making designes</p>
+                                        <p class="flex text-center" >HTML and CSS are the core of every frount end designe and bootstrap has proven to be an is an amazing library for quickily making designes</p>
                                     </div>
                                 </div>
 
@@ -106,56 +118,10 @@
                        
                     </div>
 
-                    <div class=" Card3 non-active">
-
-                        <div class="row Education">
-                            <div class="col-md-7 col-12 align-items-center justify-content-center ">
-                                <div class="card E-Card1 d-flex text-center align-items-center justify-content-center m-2 mb-4"
-                                    style="background-color: rgba(223, 243, 255, 0.938);">
-                                    <b>Modern School Rishikesh</b>
-                                    (ICSE board)<br>
-                                    Year of completion: 2021<br>
-                                    Percentage: 64.40%
-                                </div>
-                                <div class="card E-Card2 d-flex text-center align-items-center justify-content-center m-2 mt-4"
-                                    style="background-color: rgba(223, 243, 255, 0.938);">
-                                    <h4>Programming With JavaScript , Meta</h4>
-                                    <b> Coursera.com, Online</b>
-                                    Dec 2022 - Jan 2023
-                                    <p>In the course I started from the scratch,
-                                        like learning where javascript is used.
-                                        Then as the course progressed,
-                                        I also learned about loops, arrays, functions, objects,
-                                        error handling and others.
-                                        Than I also got introduced to Functional Programing and Object-Oriented
-                                        Programing,
-                                        I also learned Writing Test with jest.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-5 col-12 text-center  I-Card3 Ed2 card"
-                                style="background-color: rgba(223, 243, 255, 0.938);">
-
-                                <h4> HTML And CSS In Depth, Meta</h4>
-                                <b>Coursera.com, Online</b>
-                                Mar 2023 - Apr 2023<br>
-                                <p>In this course, I first focused on learning HTML,
-                                    and how to write your code semantically.
-                                    Then I learned about all the tags and each of there use.
-                                    Then I also learned how to make forms, as well as using &lt;iframe&gt;,
-                                    and other media elements. After completing HTML, I moved on to learn CSS,
-                                    which consisted of<br> -learning to make layouts using CSS flexbox and grids.<br>
-                                    -learning all about CSS selectors<br>
-                                    -and all the CSS effects such as transform and transition, @keyframe property, text
-                                    effects and others.
-                                    And finally I had to make a portfolio Project to finish up the course.</p>
-                            </div>
-                        </div>
-                      
-                    </div>
                     <div class=" Card4 non-active">
 
                         <div class="game-container"></div>
-                        <div class="Projects ">
+                        <div class="Projects " >
                             <div class="row mb-3">
                                 <div class="col-12 col-md-5">
                                     <div class="Project1 Projecter d-flex align-items-center justify-content-center"
@@ -185,6 +151,47 @@
                         </div>
                        
                     </div>
+
+                    <div class=" Card3 non-active">
+
+                        <div class="row Education">
+                            <div class="col-md-7 col-12 align-items-center justify-content-center ">
+                                <div class="card E-Card1 d-flex text-center align-items-center justify-content-center m-2 mb-4">
+                                    <b>Modern School Rishikesh</b>
+                                    (ICSE board)<br>
+                                    Year of completion: 2021<br>
+                                    Percentage: 64.40%
+                                </div>
+                                <div class="card E-Card2 d-flex text-center align-items-center justify-content-center m-2 mt-4"                           >
+                                    <b>Programming With JavaScript , Meta</b>
+                                    <b> Coursera.com, Online</b>
+                                    Dec 2022 - Jan 2023
+                                    <p>In the course I started from the scratch,
+                                        like learning where javascript is used.
+                                        Then I learned about loops, arrays, functions, objects,
+                                        error handling and others.
+                                        Than I also got introduced to Functional Programing and Object-Oriented
+                                        Programing,
+                                        I also learned Writing Test with jest.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-5 col-12 text-center  I-Card3 Ed2 card">
+
+                                <b> HTML And CSS In Depth, Meta</b>
+                                <b>Coursera.com, Online</b>
+                                Mar 2023 - Apr 2023<br>
+                                <p>In this course, I first focused on learning HTML,
+                                    and how to write your code semantically.
+                                    Then I learned about all the tags and there use.
+                                    Then I also learned how to make forms, as well as using
+                                     media elements. After completing HTML, I moved on to learn CSS,
+                                    which consisted of learning to make layouts using CSS flexbox and grids. As well as
+                                    learning about CSS selectors and specificity.
+                            </div>
+                        </div>
+                      
+                    </div>
+                  
 
                 </div>
             </div>

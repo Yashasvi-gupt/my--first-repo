@@ -9,26 +9,45 @@
    }
    .link {
     text-decoration: none;
+    align-items: center;
     color: white;
+    position: relative;
    }
    .NavBar > li {
     border: 2px;
-    background-color: black;
+    background-color: white;
     text-align: center;
     justify-content: center;
+    position: relative;
     width: 30px;
     height: 30px;
     border-radius: 30%;
+    border: 1px solid black;
     list-style: none;
     transition: 0.9s;
    }
    .NavBar > li:hover {
     scale: 1.8;  
+    background-color:black;
    }
    .colorfill {
-    background-color: green;
+    background-color: black;
+    border-radius: 30%;
     width: 100%;
-    height: 100%;
-    position: relative;
+    position: absolute;
+    height: 0%;
+   bottom: 1px;
+    transition: 0.9s;
+   z-index: -1;
     
+   }
+   li:hover > .colorfill {
+    height: 100%;
+   }
+   .circle {
+   color: #000;
+   transition: color 9s;
+}
+   li:hover > .link > .circle {
+    color: white;
    }

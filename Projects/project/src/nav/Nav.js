@@ -11,16 +11,17 @@ const Nav = () => {
         <nav>
             <ul className="NavBar">
                 <li> <Link className='link' to={'/'} >
-                   <ViewQuiltIcon/>
-                </Link></li>
-
+                   <ViewQuiltIcon className="circle" />
+                </Link><div className='colorfill'></div>
+                </li>
                 <li> <Link className='link' to={'/Second'}>
-                    <RoundaboutLeftIcon/>
+                    <RoundaboutLeftIcon  className="circle"/>
                 </Link> <div className='colorfill'></div></li>
 
                 <li> <Link className='link' to={'/Third'}>
-                    <SummarizeIcon/>
-                </Link></li>
+                    <SummarizeIcon className="circle"/>
+                </Link>
+                <div className='colorfill'></div></li>
             </ul>
         </nav>
     )
