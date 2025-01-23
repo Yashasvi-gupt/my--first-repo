@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './nav-comp-2.css';
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import { Link } from 'react-router-dom';
@@ -11,11 +11,19 @@ const Nav_b = () => {
         { "name": "Electronics" }, { "name": "Faction" }, { "name": "House And Kitchen" },
         { "name": "New Releases" }, { "name": "Amazon Pay" }, { "name": "Computers" }
     ]
+
+      const [dropdownOpen, setDropdownOpen] = useState(false);
+
+    const toggleDropdown = () => {
+        setDropdownOpen(!dropdownOpen);
+    };
+
+
     return (
         <div className='Nav_b'>
             <div className='NavMenu'>
                 <div className='MenuOption' >
-                    <MenuOutlinedIcon sx={{ fontSize: "24px" }} />
+                    <MenuOutlinedIcon sx={{ fontSize: "20px" }} />
                     <div className='MenuOptionText'>All</div>
                 </div>
                 {
@@ -27,6 +35,16 @@ const Nav_b = () => {
                         )
                     })
                 }
+            </div>
+            <div className='dropdown'>
+                <MenuOutlinedIcon className='dropbtn' onClick={toggleDropdown} sx={{ fontSize: "20px" }} />
+                <div className={`dropdown-content ${dropdownOpen ? 'show' : ''}`}>
+                    {option.map((item, ind) => (
+                        <Link to={'/Product'} className='MenuOption' key={ind}>
+                            <div className='MenuOptionText'>{item.name}</div>
+                        </Link>
+                    ))}
+                </div>
             </div>
         </div>
     )

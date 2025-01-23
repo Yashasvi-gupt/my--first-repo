@@ -3,7 +3,7 @@ width: 100%;
 padding: 20px;
 gap: 20px;
 display: flex;
-flex-direction: column;
+flex-direction: column; 
 box-sizing: border-box;
 background-color: rgb(238, 235, 235);
 }
@@ -38,14 +38,23 @@ display: flex;
 flex-shrink: 0;
 cursor: pointer;
 flex-direction: column;
-width: 17%;
+width: 15%;
 align-items: center;
 box-sizing: border-box;
 padding: 10px;
 background-color: rgb(247, 247, 247);
 }
+@media screen and (max-width: 768px){
+    .homeDetailLongCardItem{
+        width: 30%;
+    }
+    .homeDetailPercentageOff {
+        font-size: 5px;
+    }
+}
 .homeDetailLongCardItemImg {
     width: 100%;
+    aspect-ratio: 1/1;
 }
 .homeDetailLongCardItemImgDetail{
 display: flex;

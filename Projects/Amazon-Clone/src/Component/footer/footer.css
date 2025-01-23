@@ -24,6 +24,17 @@
   margin-top: 10px;
   font-size: 14px;
 }
+@media screen and (max-width: 768px) {
+  .footerContent {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contentFooterSubTitlediv {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+}
 .contentFooterSubTitleCont {
   margin-bottom: 10px;
 }

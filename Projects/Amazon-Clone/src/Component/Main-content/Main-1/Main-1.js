@@ -5,7 +5,9 @@ import asdd from '../../../asdd.json'
 const Main_1 = () => {
     return (
         <div className='HomeScreenImg'>
+            <div className='HomeScreenImg_1'>
             <img className='homeImg' alt='HomeImg' src='https://images-eu.ssl-images-amazon.com/images/G/31/img24hp/urec/hero/Under1499_Tallhero_3000x1200._CB568928188_.jpg' />
+            </div>
             <div className='grayEnd'></div>
             <div className='HomeItem'>
                {
