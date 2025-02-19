@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"; 
 import './product.css';
 import StarRateIcon from '@mui/icons-material/StarRate';
 import StarOutlineIcon from '@mui/icons-material/StarOutline';

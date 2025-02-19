@@ -1,11 +1,12 @@
 .NavBar {
+    justify-self: anchor-center;
     top: 85vh;
     height: 30px;
-    width: 100vw;
+    width: 10vw;
     position: fixed;
     display: flex;
     justify-content: center;
-    gap: 2%;
+    gap: 10%;
    }
    .link {
     text-decoration: none;

@@ -1,107 +1,125 @@
 .Nav_a {
     display: flex;
-    background-color:black;
+    background-color: black;
     width: 100%;
-   height: auto;
+    height: auto;
     color: white;
     box-sizing: border-box;
 }
+
 .Nav_a_left {
     display: flex;
     gap: 5px;
     padding: 10px;
 }
+
 .NavLeftLogo {
     width: 50px;
     height: 25px;
     text-decoration: none;
     color: white;
     display: flex;
-    padding: 10px;
+    padding: 4px;
     cursor: pointer;
+
     &:hover {
         border: 1px solid;
         border-radius: 3px;
     }
 }
+
 .amazonLogaNav {
     height: 100%;
     width: 70px;
 }
+
 .NavLocation {
     display: flex;
     gap: 5px;
     padding: 8px;
     height: 30px;
     cursor: pointer;
+
     &:hover {
         border-radius: 3px;
-        border: 1px solid ;
+        border: 1px solid;
     }
 }
+
 .NavLocationIcon {
     width: 15px;
     padding-top: 5px;
 }
+
 .NavLocationPlace {
     display: flex;
     flex-direction: column;
 }
-.NavLocationPlaceTop{
+
+.NavLocationPlaceTop {
     font-size: 12px;
     color: #ccc;
     letter-spacing: 0.5px;
     font-weight: 500;
 }
+
 .NavLocationPlaceBottom {
     font-size: 14px;
     font-weight: 600;
     line-height: 10px;
 }
+
 .Nav_a_center {
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 10px, 4px;
-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px, 4px;
+    width: 50%;
 }
+
 .NavSearch {
-display: flex;
-flex-grow: 1;
-width: 100%;
-height: 40px;
-border-radius: 5px;
-border: 1px solid rgb(22, 28, 36);
-} 
-.NavSearchAll {
-display: flex;
-background-color: #cdcdcd;
-gap: 5px;
-border-top-left-radius: 5px;
-border-bottom-left-radius: 5px;
-justify-content: center;
-align-items: center;
-padding: 5px;
-cursor: pointer;
-color: #999999;
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid rgb(22, 28, 36);
 }
+
+.NavSearchAll {
+    display: flex;
+    background-color: #cdcdcd;
+    gap: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    color: #999999;
+}
+
 .AllText {
     font-size: 12px;
     font-weight: 600;
 }
+
 .SearchInputBox {
-    padding: 5px ;
+    padding: 5px;
     width: 84%;
+
     &::placeholder {
         font-size: 15px;
         font-weight: 500;
         color: gray;
     }
+
     &::focus {
         outline: none;
     }
 }
-.NavSearchIcon{
+
+.NavSearchIcon {
     background-color: #fabd69;
     font-size: 10px;
     border-top-right-radius: 5px;
@@ -111,40 +129,93 @@ color: #999999;
     display: flex;
     justify-content: center;
     align-items: center;
+
     &:hover {
         background-color: #f1ba73;
     }
 }
+
 .SearchIcon {
     font-size: 20px;
     color: black;
 }
+
 .Nav_a_right {
+    position: relative;
     padding: 10px;
     color: white;
     display: flex;
     gap: 1px;
-
-}
-.NavLangChoose {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
-    padding-top: 10px;
-    height: 30px;
-    gap: 5px;
     cursor: pointer;
-    &:hover {
-        border-radius: 3px;
-        border: 1px solid;
+}
+
+.Menu-Icon {
+    display: none;
+    cursor: pointer;
+}
+
+.Dropdown {
+    display: flex;
+    flex-direction: column;
+    max-height: 0;
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+    background-color: #232f3e;
+    color: white;
+    overflow: hidden; 
+    transition: max-height 0.5s ease-out, opacity 0.9s ease-out;
+    margin-top: 35px;
+}
+
+.Dropdown.Showe {
+    max-height: 500px; 
+    opacity: 1;
+    transition: max-height 0.9s ease-out, opacity 0.5s ease-out !important;
+}
+
+.dropdownContent{
+    padding: 10px; 
+    color: white; 
+    cursor: pointer; 
+}
+
+.dropdownContent a {
+    color: white; 
+    text-decoration: none; /* Remove underline */
+}
+
+.dropdownContent a:hover {
+    color: #fabd69; /* Optional: Add hover effect */
+}
+
+@media screen and (max-width: 768px) {
+    .Nav_a_right {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+    }
+
+    .Menu-Icon {
+        display: grid;
+    }
+
+   
+    .a {
+        display: none !important;
+    }
+
+    .Nav_a_center {
+        width: 100%;
     }
 
 }
+
 .Flag {
     width: 30px;
     height: 20px;
 }
+
 .chooseLang {
     font-size: 14px;
     display: flex;
@@ -152,9 +223,11 @@ color: #999999;
     align-items: center;
     font-weight: 700;
 }
+
 .LangDropDown {
     color: #ccc;
 }
+
 .NavSigneIn {
     display: flex;
     flex-direction: column;
@@ -164,19 +237,23 @@ color: #999999;
     cursor: pointer;
     padding: 8px;
     height: 30px;
+
     &:hover {
         border: 1px solid;
         border-radius: 3px;
     }
 }
+
 .NavSigneInHello {
     font-size: 12px;
     font-weight: 500;
 }
+
 .CartTitle {
     font-size: 14px;
     font-weight: 500px;
 }
+
 .OnCart {
     position: absolute;
     bottom: 70%;
@@ -185,6 +262,7 @@ color: #999999;
     font-weight: 600;
     color: #fabd69;
 }
+
 @media screen and (max-width: 768px) {
     .SearchBar {
         width: 100%;
@@ -199,4 +277,22 @@ color: #999999;
         height: 60px;
         z-index: 1000;
     }
+
+    .NavLeftLogo {
+        width: 35px;
+        height: 20px;
+    }
+
+    .NavLocationPlaceTop {
+        font-size: 5px;
+    }
+
+    .NavLocationPlaceBottom {
+        font-size: 4px;
+    }
+
+    .NavSearch {
+        height: 25px;
+    }
+
 }

@@ -144,7 +144,7 @@ const items = [
 `<div>
 <h1>highlighter</h1>
 <p>This is for trial only</p>
-</div>`
+</div>` 
 ];
 
 export default items;

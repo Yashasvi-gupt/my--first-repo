@@ -8,14 +8,14 @@ const T2 = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [fade, setFade] = useState(true);
+ 
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setFade(false);
+      
       setTimeout(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % contents.length);
-        setFade(true);
+       
       }, 500); // Duration of the fade-out transition
     }, 2500);
 
@@ -23,11 +23,11 @@ const T2 = () => {
   }, [contents.length]);
 
   const handleNavClick = (index) => {
-    setFade(false);
+   
     setTimeout(() => {
       setCurrentIndex(index);
-      setFade(true);
-    }, 500); // Duration of the fade-out transition
+     
+    }, 500); 
   };
 
   return (

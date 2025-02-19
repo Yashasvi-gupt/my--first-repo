@@ -3,7 +3,7 @@
     padding: 20px 18px 18px;
     display: flex;
     gap: 10px;
-}
+} 
 
 .topLeftcart {
     padding: 20px 15px 15px;
@@ -58,6 +58,20 @@
 }
 .cartItemProductName {
   font-size: 18px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 140px; /* Adjust as needed */
+}
+.cartItemProductName.visible {
+  white-space: normal;
+  overflow: visible;
+}
+.knowMore {
+  color: #007185;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 5px;
 }
 .inStockCart {
   color: #007600;
@@ -116,4 +130,16 @@ align-items: center;
 cursor: pointer;
 border-radius: 10px;
 font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+    .cart {
+        flex-direction: column;
+    }
+    .topRightCart {
+        width: 100%;
+    }
+    .topLeftcart {
+        width: 100%;
+    }
 }

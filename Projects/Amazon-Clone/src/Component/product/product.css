@@ -1,5 +1,5 @@
 .productPage{
-width: 100%;
+width: 100%; 
 }
 .productTopBanner{
 display: flex;
@@ -31,7 +31,7 @@ cursor: pointer;
 }
 .productsPageMain {
 display: flex;
-padding: 16px 8px;
+justify-content: center;
 }
 .productsPageMainLeftCategory {
 width: 14%;
@@ -82,9 +82,12 @@ font-weight: 600;
   }
   .itemsImageProductPage{
     width: 100%;
-    display: grid;
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
     gap: 100px;
-    grid-template-columns: 308px 308px 308px
+    justify-content: center;
+    flex-wrap: wrap;
   }
   .itemsImageProductPageOne{
     display: flex;
@@ -92,6 +95,7 @@ font-weight: 600;
     width: 100%;
     border-radius: 5px;
     box-sizing: border-box;
+    max-width: 308px;
     height: 640px;
   }
   .imgBlockItemsImageProductPageOne{
@@ -151,4 +155,12 @@ font-weight: 600;
 .freeDelivery {
     font-weight: 400;
     margin-top: 10px;
+}
+@media screen and (max-width: 768px) {
+  .productTopBanner{
+    display: none;
+  }
+  .productsPageMainLeftCategory{
+    display: none;
+  }
 }
