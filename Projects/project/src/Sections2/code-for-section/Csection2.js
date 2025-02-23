@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import './Code.css';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { solarizedDarkAtom } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import items from '../SectionStor.js';
+import items from '../SectionStor2.js';
 
-const Code1 = ({ index }) => {
+const Code2 = ({ index }) => {
   const [height, setHeight] = useState('0');
   const [overflow, setOverflow] = useState('hidden');
 
@@ -17,7 +17,7 @@ const Code1 = ({ index }) => {
     <div className="code-bubble" >
       <button onClick={toggleHeight}> {height === '0' ? 'Show' : "Don't Show"}</button>
       <div style={{ height, overflow}}>
-     <SyntaxHighlighter language="React" style={solarizedDarkAtom}>
+     <SyntaxHighlighter language="javascript" style={solarizedDarkAtom}>
         {items[index]}
       </SyntaxHighlighter>
       </div>
@@ -25,4 +25,4 @@ const Code1 = ({ index }) => {
   );
 };
 
-export default Code1;
+export default Code2;

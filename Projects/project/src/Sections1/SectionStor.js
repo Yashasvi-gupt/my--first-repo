@@ -141,10 +141,179 @@ const items = [
   };
   
   export default T1;`,
-`<div>
-<h1>highlighter</h1>
-<p>This is for trial only</p>
-</div>` 
+`import React from 'react';
+
+const T2 = () => {
+  const contents = [
+    { img: 'https://picsum.photos/300/500?random=2' },
+    { img: 'https://picsum.photos/300/400?random=1' },
+    { img: 'https://picsum.photos/300/600?random=3' },
+    { img: 'https://picsum.photos/300/800?random=5' },
+    { img: 'https://picsum.photos/300/700?random=4' },
+    { img: 'https://picsum.photos/300/700?random=4' },
+    { img: 'https://picsum.photos/300/800?random=5' },
+    { img: 'https://picsum.photos/300/500?random=2' },
+    { img: 'https://picsum.photos/300/900?random=6' },
+    { img: 'https://picsum.photos/300/400?random=1' },
+    { img: 'https://picsum.photos/300/900?random=6' },
+    { img: 'https://picsum.photos/300/600?random=3' },
+    { img: 'https://picsum.photos/300/700?random=4' },
+    { img: 'https://picsum.photos/300/800?random=5' },
+    { img: 'https://picsum.photos/300/500?random=2' },
+    { img: 'https://picsum.photos/300/900?random=6' },
+    { img: 'https://picsum.photos/300/500?random=2' },
+    { img: 'https://picsum.photos/300/900?random=6' },
+    { img: 'https://picsum.photos/300/400?random=1' },
+    { img: 'https://picsum.photos/300/900?random=6' }
+    
+  ];
+
+  return (
+    <div className="pinterest-layout">
+      <style>
+        {'
+          .pinterest-layout {
+            column-width: 200px;
+            column-gap: 16px;
+            padding: 16px;
+          }
+          .pinterest-item {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 16px;
+            transition: transform 0.3s;
+            display: inline-block;
+            width: 100%;
+          }
+          .pinterest-item:hover {
+            transform: translateY(-8px);
+          }
+          .pinterest-item img {
+            width: 100%;
+            display: block;
+          }
+          @media screen and (max-width: 768px) {
+            .pinterest-layout {
+              column-width: 150px; /* Ensure at least 2 columns on small screens */
+            }
+          }
+        '}
+      </style>
+      {contents.map((content, index) => (
+        <div className="pinterest-item" key={index}>
+          <img src={content.img} alt={'Placeholder \${index + 1}'} />
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default T2;`,
+`import React, { useEffect } from 'react';
+
+const T3 = () => {
+  const contents = [
+    { img: 'https://picsum.photos/200/300?random=1', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+    { img: 'https://picsum.photos/200/300?random=2', text: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
+    { img: 'https://picsum.photos/200/300?random=3', text: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.' },
+    { img: 'https://picsum.photos/200/300?random=4', text: 'Nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.' },
+    { img: 'https://picsum.photos/200/300?random=5', text: 'In reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' }
+  ];
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        } else {
+          entry.target.classList.remove('animate');
+        }
+      });
+    });
+
+    const rows = document.querySelectorAll('.row');
+    rows.forEach(row => observer.observe(row));
+
+    return () => {
+      rows.forEach(row => observer.unobserve(row));
+    };
+  }, []);
+
+  return (
+    <div className="first">
+      <style>
+        {'
+          .first {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+          }
+          .row {
+            display: flex;
+            height: 350px;
+            gap: 16px;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(100px) scale(0.8);
+            transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+          }
+          .row.animate {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+          }
+          .columnImg {
+            width: 35%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .columnTxt {
+            width: 65%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .column img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+          }
+          .column p {
+            font-size: 16px;
+            color: #333;
+          }
+        '}
+      </style>
+      {contents.map((content, index) => (
+        <div className="row" key={index}>
+          {index % 2 === 0 ? (
+            <>
+              <div className="columnImg">
+                <img src={content.img} alt={'Placeholder \${index + 1}'} />
+              </div>
+              <div className="columnTxt">
+                <p>{content.text}</p>
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="columnTxt">
+                <p>{content.text}</p>
+              </div>
+              <div className="columnImg">
+                <img src={content.img} alt={'Placeholder \${index + 1}'} />
+              </div>
+            </>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default T3;` 
 ];
 
 export default items;
