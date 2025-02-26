@@ -1,4 +1,5 @@
-.section3{
+.section1{
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,9 +8,11 @@
     background-color: rgb(7, 2, 26);
     border-bottom: 10px solid rgb(0, 1, 61);
 }
-.ds {
+.ds1 {
     margin-top: 15px;
     background-color: white;
-    width: 90vw;
+    width: 80vw ;
     height: 75vh;
+    overflow-x:scroll;
 }
+
