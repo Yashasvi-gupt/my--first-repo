@@ -5,6 +5,11 @@
   padding: 1.2rem 2rem;
   background: #111827;
   color: white;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.navbar.dark {
+  background: #030712;
 }
 
 .brand {
@@ -16,6 +21,7 @@
 .nav-links {
   display: flex;
   gap: 1rem;
+  align-items: center;
 }
 
 .nav-links a {
@@ -27,9 +33,18 @@
   color: white;
 }
 
+.nav-theme-toggle {
+  margin-left: 0.4rem;
+}
+
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
     gap: 0.8rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }

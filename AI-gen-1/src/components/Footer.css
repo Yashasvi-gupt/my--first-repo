@@ -1,6 +1,31 @@
 .footer {
-  padding: 1.2rem 2rem;
-  text-align: center;
+  padding: 1.8rem 2rem;
   background: #111827;
   color: #d1d5db;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.footer.dark {
+  background: #030712;
+  color: #f3f4f6;
+}
+
+.footer h3 {
+  margin: 0 0 0.3rem;
+  color: white;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
 }

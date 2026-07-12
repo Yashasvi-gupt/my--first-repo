@@ -2,11 +2,66 @@
   padding: 2rem;
   background: white;
   flex: 1;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.body-section.dark {
+  background: #111827;
+  color: #f9fafb;
+}
+
+.body-section.dark .translation-form textarea,
+.body-section.dark .translation-form select,
+.body-section.dark .chat-form input,
+.body-section.dark .translation-output,
+.body-section.dark .chat-window {
+  background: #111827;
+  color: #f9fafb;
+  border-color: #374151;
+}
+
+.body-section.dark .secondary-btn {
+  background: #1f2937 !important;
+  color: #f9fafb !important;
+  border-color: #374151;
+}
+
+.body-section.dark .chat-bubble.assistant {
+  background: #312e81;
+  color: #e0e7ff;
+}
+
+.body-section.dark .chat-bubble.user {
+  background: #f9fafb;
+  color: #111827;
 }
 
 .body-intro {
   max-width: 760px;
   margin-bottom: 1.5rem;
+}
+
+.body-intro-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.theme-toggle {
+  border: 1px solid #d1d5db;
+  border-radius: 999px;
+  background: white;
+  color: #111827;
+  padding: 0.55rem 0.9rem;
+  cursor: pointer;
+  font: inherit;
+}
+
+.body-section.dark .theme-toggle {
+  background: #1f2937;
+  color: #f9fafb;
+  border-color: #374151;
 }
 
 .section-tag {
@@ -24,9 +79,32 @@
   font-size: 1.7rem;
 }
 
+.body-section.dark .body-intro h2 {
+  color: #f9fafb;
+}
+
 .body-intro p {
   margin: 0;
   color: #6b7280;
+}
+
+.body-section.dark .body-intro p {
+  color: #d1d5db;
+}
+
+.example-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+}
+
+.example-pill {
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #4338ca;
+  font-size: 0.85rem;
 }
 
 .body-grid {
@@ -42,6 +120,11 @@
   background: #f9fafb;
 }
 
+.body-section.dark .card {
+  background: #1f2937;
+  border-color: #374151;
+}
+
 .card-header {
   display: flex;
   justify-content: space-between;
@@ -55,9 +138,17 @@
   color: #111827;
 }
 
+.body-section.dark .card h3 {
+  color: #f9fafb;
+}
+
 .card p {
   margin: 0;
   color: #6b7280;
+}
+
+.body-section.dark .card p {
+  color: #d1d5db;
 }
 
 .translation-card {
@@ -222,5 +313,26 @@
 @media (max-width: 640px) {
   .body-grid {
     grid-template-columns: 1fr;
+  }
+
+  .body-section {
+    padding: 1.2rem;
+  }
+
+  .body-intro-top {
+    flex-direction: column;
+  }
+
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .chat-form {
+    flex-direction: column;
+  }
+
+  .header {
+    padding: 3rem 1.2rem;
   }
 }

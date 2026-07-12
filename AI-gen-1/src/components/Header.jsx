@@ -1,18 +1,23 @@
 import './Header.css'
 
-function Header() {
+function Header({ isDarkMode }) {
   return (
-    <header className="header">
-      <div>
-        <p className="eyebrow">Simple AI Landing Page</p>
-        <h1>Build smarter experiences with AI.</h1>
+    <header className={`header ${isDarkMode ? 'dark' : ''}`}>
+      <div className="header-content">
+        <p className="eyebrow">AI Productivity Suite</p>
+        <h1>Turn everyday writing and communication into AI-powered workflows.</h1>
         <p className="header-text">
-          This homepage shows a clean layout with navigation, a welcoming hero section,
-          useful content, and a polished footer.
+          Explore a growing set of practical AI tools for chat, translation, summarizing,
+          writing improvement, and polished email creation.
         </p>
         <div className="header-actions">
-          <a href="#about" className="btn primary">Explore More</a>
-          <a href="#contact" className="btn secondary">Get in Touch</a>
+          <a href="#about" className="btn primary">Explore Tools</a>
+          <a href="#contact" className="btn secondary">Contact Us</a>
+        </div>
+        <div className="hero-highlights">
+          <span>⚡ Fast AI responses</span>
+          <span>🧠 Multi-tool workflow</span>
+          <span>✨ Clean, modern UI</span>
         </div>
       </div>
     </header>

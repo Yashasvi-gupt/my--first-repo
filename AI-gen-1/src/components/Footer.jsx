@@ -1,9 +1,13 @@
 import './Footer.css'
 
-function Footer() {
+function Footer({ isDarkMode }) {
   return (
-    <footer className="footer" id="contact">
-      <p>© 2026 AI Gen. All rights reserved.</p>
+    <footer className={`footer ${isDarkMode ? 'dark' : ''}`} id="contact">
+      <div>
+        <h3>Ready to build with AI?</h3>
+        <p>Bring intelligent features into your next app with a clean, scalable workflow.</p>
+      </div>
+      <a href="mailto:hello@aitoolsdemo.com" className="footer-link">hello@aitoolsdemo.com</a>
     </footer>
   )
 }

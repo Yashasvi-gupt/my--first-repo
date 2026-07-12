@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yashasvi Gupta | Portfolio</title>
+    <meta
+      name="description"
+      content="A polished personal portfolio website for Yashasvi Gupta."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero" id="home">
+        <video class="hero-video" autoplay muted loop playsinline>
+          <source src="VID_20241014001441.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-overlay"></div>
+
+        <nav class="top-nav" aria-label="Primary navigation">
+          <a class="brand" href="#home">PORTFOLIO</a>
+          <button class="menu-toggle" type="button" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+          </div>
+        </nav>
+
+        <div class="hero-content">
+          <div class="hero-card">
+            <h1>
+              Hi, I am <span>Yashasvi</span>
+            </h1>
+            <p>
+              I am an aspiring web developer with strong interest in front-end
+              development, responsive design, and modern user interfaces.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="git cheat sheet.pdf" download>Download Resume</a>
+              <a class="btn btn-secondary" href="#contact">Contact Me</a>
+            </div>
+            <div class="social-links" aria-label="Social links">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=yashasvigupt@gmail.com&su=Contact&body=Hi%20Yashasvi," target="_blank" rel="noreferrer" aria-label="Email">
+                <i class="fa-regular fa-envelope"></i>
+              </a>
+              <a href="https://wa.me/9258274909" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+              <a href="https://linkedin.com/in/yashasvigupta03" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/Yashasvi-gupt" target="_blank" rel="noreferrer" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="section" id="skills">
+          <div class="section-heading">
+            <p class="eyebrow">Skills</p>
+            <h2>Tools and technologies I am learning and using</h2>
+          </div>
+          <div class="skills-grid">
+            <article class="info-card">
+              <div class="icon-row">
+                <img src="js.png" alt="JavaScript" />
+                <img src="react-logo.png" alt="React" />
+              </div>
+              <p>
+                React and JavaScript are the core technologies I use to build interactive web experiences.
+              </p>
+            </article>
+            <article class="info-card">
+              <div class="icon-row">
+                <img src="HTML.png" alt="HTML" />
+                <img src="bootstrap-logo.png" alt="Bootstrap" />
+                <img src="css.png" alt="CSS" />
+              </div>
+              <p>
+                HTML, CSS, and Bootstrap help me structure content and create polished responsive designs.
+              </p>
+            </article>
+            <article class="info-card">
+              <div class="icon-row">
+                <img src="GitHub-Logo.png" alt="GitHub" />
+                <img src="Visual-Studio-Logo.png" alt="Visual Studio Code" />
+              </div>
+              <p>
+                I work with VS Code, Git, and GitHub to organize code and share projects effectively.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="projects">
+          <div class="section-heading">
+            <p class="eyebrow">Projects</p>
+            <h2>Selected work</h2>
+          </div>
+          <div class="projects-grid">
+            <article class="project-card">
+              <h3>Layout Library</h3>
+              <p>
+                A React-based collection of reusable layout ideas and component patterns I use for faster future builds.
+              </p>
+              <ul>
+                <li>Reusable UI structure</li>
+                <li>Clean component organization</li>
+                <li>Easy to expand for future projects</li>
+              </ul>
+              <a href="../Projects/Amazon-Clone" target="_blank" rel="noreferrer">Open project</a>
+            </article>
+            <article class="project-card">
+              <h3>Amazon Clone</h3>
+              <p>
+                A React application with shopping cart interactions, live total updates, and a polished product layout.
+              </p>
+              <ul>
+                <li>Cart and remove actions</li>
+                <li>Dynamic price calculation</li>
+                <li>Modern front-end interaction flow</li>
+              </ul>
+              <a href="../Projects/Amazon-Clone" target="_blank" rel="noreferrer">Open project</a>
+            </article>
+            <article class="project-card">
+              <h3>Weather App</h3>
+              <p>
+                A responsive JavaScript app that uses a weather API to show forecasts for any searched location.
+              </p>
+              <ul>
+                <li>Responsive interface</li>
+                <li>5-day forecast display</li>
+                <li>Location-based weather search</li>
+              </ul>
+              <a href="../Projects/Weather-app/AiWeb1.Html" target="_blank" rel="noreferrer">Open project</a>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="education">
+          <div class="section-heading">
+            <p class="eyebrow">Education</p>
+            <h2>Learning journey</h2>
+          </div>
+          <div class="education-grid">
+            <article class="edu-card">
+              <h3>Modern School Rishikesh</h3>
+              <p class="meta">ICSE Board • 2021</p>
+              <p>Completed secondary education with a strong foundation in academics and discipline.</p>
+            </article>
+            <article class="edu-card">
+              <h3>Programming with JavaScript</h3>
+              <p class="meta">Meta on Coursera • Dec 2022 - Jan 2023</p>
+              <p>
+                Built core JavaScript skills including loops, arrays, functions, objects, and testing.
+              </p>
+            </article>
+            <article class="edu-card">
+              <h3>HTML and CSS in Depth</h3>
+              <p class="meta">Meta on Coursera • Mar 2023 - Apr 2023</p>
+              <p>
+                Learned semantic HTML, CSS layouts, selectors, forms, media, and responsive design methods.
+              </p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <section class="section contact-section" id="contact">
+        <div class="section-heading">
+          <p class="eyebrow">Contact</p>
+          <h2>Let’s build something great</h2>
+        </div>
+        <div class="contact-card">
+          <p>
+            I am currently improving my front-end skills and open to opportunities, collaborations, and new ideas.
+          </p>
+          <a class="btn btn-primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=yashasvigupt@gmail.com&su=Contact&body=Hi%20Yashasvi," target="_blank" rel="noreferrer">Email Me</a>
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

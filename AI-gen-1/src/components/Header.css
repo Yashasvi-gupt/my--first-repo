@@ -1,6 +1,17 @@
 .header {
   padding: 4rem 2rem;
   background: linear-gradient(135deg, #eef2ff, #f9fafb);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.header.dark {
+  background: linear-gradient(135deg, #1f2937, #111827);
+  color: #f9fafb;
+}
+
+.header-content {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .eyebrow {
@@ -18,11 +29,19 @@
   color: #111827;
 }
 
+.header.dark h1 {
+  color: #f9fafb;
+}
+
 .header-text {
   max-width: 700px;
   font-size: 1.05rem;
   color: #4b5563;
   margin-bottom: 1.5rem;
+}
+
+.header.dark .header-text {
+  color: #d1d5db;
 }
 
 .header-actions {
@@ -48,4 +67,30 @@
   background: white;
   color: #111827;
   border: 1px solid #d1d5db;
+}
+
+.header.dark .btn.secondary {
+  background: #1f2937;
+  color: #f9fafb;
+  border-color: #374151;
+}
+
+.hero-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.hero-highlights span {
+  background: rgba(79, 70, 229, 0.08);
+  color: #4338ca;
+  padding: 0.5rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+}
+
+.header.dark .hero-highlights span {
+  background: rgba(129, 140, 248, 0.16);
+  color: #e0e7ff;
 }

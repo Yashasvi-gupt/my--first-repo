@@ -2,4 +2,12 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background: #ffffff;
+  color: #111827;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.homepage.dark {
+  background: #111827;
+  color: #f9fafb;
 }
