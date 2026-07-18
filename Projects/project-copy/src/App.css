@@ -1,0 +1,16 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at top left, #091229 0%, #050814 35%, #04060c 100%);
+  color: #f8fbff;
+}
+
+.App > * {
+  width: 100%;
+}
+
+main {
+  flex: 1;
+}
+

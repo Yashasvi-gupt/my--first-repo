@@ -1,0 +1,30 @@
+.section-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1.75rem;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.section-card {
+  background: rgba(15, 23, 42, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-preview {
+  padding: 1.5rem;
+  min-height: 420px;
+  background: linear-gradient(180deg, rgba(8, 13, 33, 0.95), rgba(12, 19, 52, 0.95));
+  color: #f8fafc;
+}
+
+@media (max-width: 900px) {
+  .section-layout {
+    padding: 1rem;
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,38 @@
+.code-viewer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.code-toggle {
+  align-self: flex-start;
+  padding: 0.75rem 1rem;
+  background: #0e1d40;
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.code-toggle:hover {
+  background: #132a56;
+}
+
+.code-panel {
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  max-height: 0;
+  opacity: 0;
+}
+
+.code-panel.expanded {
+  max-height: 80vh;
+  opacity: 1;
+}
+
+.code-panel pre {
+  margin: 0;
+  border-radius: 0.75rem;
+}
