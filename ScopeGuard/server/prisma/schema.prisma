@@ -1,0 +1,70 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+// Using plain strings for enum-like fields for SQLite compatibility
+// Allowed values (enforce at application layer):
+// RateType: HOURLY, FIXED
+// LogType: HOURS, DELIVERABLE, REVISION
+// ProjectStatus: ON_TRACK, SCOPE_CREEP, COMPLETE
+// InvoiceStatus: DRAFT, SENT, OVERDUE, PAID
+
+model User {
+  id            String    @id @default(uuid())
+  email         String    @unique
+  passwordHash  String
+  name          String
+  businessName  String?
+  createdAt     DateTime  @default(now())
+  projects      Project[]
+}
+
+model Project {
+  id                 String        @id @default(uuid())
+  userId             String
+  user               User          @relation(fields: [userId], references: [id])
+  clientName         String
+  clientEmail        String?
+  title              String
+  rateType           String
+  rateAmount         Float
+  scopedHours        Float?
+  scopedDeliverables Int?
+  revisionLimit      Int?
+  deadline           DateTime?
+  status             String @default("ON_TRACK")
+  createdAt          DateTime      @default(now())
+  logs               WorkLog[]
+  invoices           Invoice[]
+}
+
+model WorkLog {
+  id          String   @id @default(uuid())
+  projectId   String
+  project     Project  @relation(fields: [projectId], references: [id])
+  type        String
+  amount      Float
+  description String
+  isExtraWork Boolean  @default(false)
+  billed      Boolean  @default(false)
+  createdAt   DateTime @default(now())
+}
+
+model Invoice {
+  id            String        @id @default(uuid())
+  projectId     String
+  project       Project       @relation(fields: [projectId], references: [id])
+  invoiceNumber String        @unique
+  lineItems     String
+  totalAmount   Float
+  status        String @default("DRAFT")
+  dueDate       DateTime
+  sentAt        DateTime?
+  paidAt        DateTime?
+  createdAt     DateTime      @default(now())
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meta Copy</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div class="card">
+        <div class="header">
+          <div class="icon-badge" aria-hidden="true">✂</div>
+          <div>
+            <h1>Meta Copy</h1>
+            <p class="subtitle">Grab the page title and description in one tap.</p>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="field-label-row">
+            <label for="titleValue">Page title</label>
+            <span class="pill">Title</span>
+          </div>
+          <div class="value-row">
+            <span id="titleValue" class="value">Loading…</span>
+            <button id="copyTitleBtn" class="copy-btn">Copy</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="field-label-row">
+            <label for="descriptionValue">Meta description</label>
+            <span class="pill">Description</span>
+          </div>
+          <div class="value-row">
+            <span id="descriptionValue" class="value">Loading…</span>
+            <button id="copyDescriptionBtn" class="copy-btn">Copy</button>
+          </div>
+        </div>
+
+        <button id="copyBothBtn" class="primary-btn">Copy Both</button>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
